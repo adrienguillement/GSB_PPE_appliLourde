@@ -56,5 +56,12 @@ namespace GSB_PPE
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.recruitment_date.Contains(recruitment_date.Text) && x.first_name.Contains(first_name_visitor.Text) && x.last_name.Contains(last_name_visitor.Text));
             this.dataGridView1.DataSource = filtered;
         }
+
+        private void newVisitorButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            AddVisitor addVisitor = new AddVisitor();
+            addVisitor.Show();
+        }
     }
 }

@@ -24,3 +24,4 @@ C:\Users\adrie\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\obj\Debug\GSB_PP
 C:\Users\adrie\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.Form1.resources
 C:\Users\adrie\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.Properties.Resources.resources
 C:\Users\adrie\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.csproj.GenerateResource.Cache
+C:\Users\adrie\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.AddVisitor.resources

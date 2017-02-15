@@ -53,6 +53,7 @@
             this.firstNameDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notorietyCoefDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newVisitorButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,6 +74,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.newVisitorButton);
             this.tabPage1.Controls.Add(this.recruitment_date);
             this.tabPage1.Controls.Add(this.recruitment);
             this.tabPage1.Controls.Add(this.first_name_visitor);
@@ -161,7 +163,7 @@
             this.addressDataGridViewTextBoxColumn,
             this.recruitmentdateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.visitorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(231, 101);
+            this.dataGridView1.Location = new System.Drawing.Point(248, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(555, 282);
             this.dataGridView1.TabIndex = 0;
@@ -260,6 +262,16 @@
             this.notorietyCoefDoctor.HeaderText = "Coefficient de notoriété";
             this.notorietyCoefDoctor.Name = "notorietyCoefDoctor";
             // 
+            // newVisitorButton
+            // 
+            this.newVisitorButton.Location = new System.Drawing.Point(6, 6);
+            this.newVisitorButton.Name = "newVisitorButton";
+            this.newVisitorButton.Size = new System.Drawing.Size(128, 23);
+            this.newVisitorButton.TabIndex = 8;
+            this.newVisitorButton.Text = "Nouveau Visiteur";
+            this.newVisitorButton.UseVisualStyleBackColor = true;
+            this.newVisitorButton.Click += new System.EventHandler(this.newVisitorButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +318,7 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.TextBox recruitment_date;
         private System.Windows.Forms.Label recruitment;
+        private System.Windows.Forms.Button newVisitorButton;
     }
 }
 
