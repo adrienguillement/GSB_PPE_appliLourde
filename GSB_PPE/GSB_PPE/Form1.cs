@@ -59,9 +59,9 @@ namespace GSB_PPE
 
         private void newVisitorButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             AddVisitor addVisitor = new AddVisitor();
             addVisitor.Show();
+            this.Visible = false;
         }
     }
 }

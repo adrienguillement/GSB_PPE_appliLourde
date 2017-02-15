@@ -14,6 +14,6 @@ namespace Models.src.metiers
         public string address { get; set; }
         public string recruitment_date { get; set; }
         public string departement_id { get; set; }
-        public string type_id { get; set; }
+        public string member_id { get; set; }
     }
 }

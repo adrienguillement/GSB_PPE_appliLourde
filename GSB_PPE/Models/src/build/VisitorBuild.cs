@@ -7,6 +7,7 @@ using System.Net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Models.src.metiers;
+using Models.src.build;
 
 namespace Models.src.build
 {
@@ -33,6 +34,15 @@ namespace Models.src.build
             string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/" + id);
             Visitor listClass = JsonConvert.DeserializeObject<Visitor>(getJson);
             return listClass;
+        }
+
+        public TextResult addOne(String last_name, String first_name, String address, String recrutementDate, String departement_id, String member_id)
+        {
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/add/"+last_name+"/"+first_name+"/"+ address + "/"+ recrutementDate + "/"+ departement_id + "/"+ member_id);
+            TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
+
+            return result;
         }
     }
 }
