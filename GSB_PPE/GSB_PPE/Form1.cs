@@ -31,7 +31,7 @@ namespace GSB_PPE
         {
             VisitorBuild visitor = new VisitorBuild();
             this.listVisitor = visitor.findAll();
-
+            
             this.dataGridView1.DataSource = listVisitor;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
