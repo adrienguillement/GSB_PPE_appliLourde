@@ -40,7 +40,6 @@
             this.last_name = new System.Windows.Forms.Label();
             this.last_name_visitor = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,20 +48,22 @@
             this.firstNameDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notorietyCoefDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitorBuildBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recruitmentdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.visitorBuildBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBuildBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.newVisitorButton);
             this.tabPage1.Controls.Add(this.recruitment_date);
             this.tabPage1.Controls.Add(this.recruitment);
@@ -183,11 +185,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(727, 282);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // visitorBindingSource
-            // 
-            this.visitorBindingSource.DataSource = typeof(Models.src.metiers.Visitor);
             // 
             // tabPage2
             // 
@@ -248,9 +247,13 @@
             this.notorietyCoefDoctor.HeaderText = "Coefficient de notoriété";
             this.notorietyCoefDoctor.Name = "notorietyCoefDoctor";
             // 
-            // visitorBuildBindingSource
+            // Supprimer
             // 
-            this.visitorBuildBindingSource.DataSource = typeof(Models.src.build.VisitorBuild);
+            this.Supprimer.DataPropertyName = "id";
+            this.Supprimer.HeaderText = "Supprimer";
+            this.Supprimer.Name = "Supprimer";
+            this.Supprimer.Text = "Supprimer";
+            this.Supprimer.UseColumnTextForButtonValue = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -288,13 +291,22 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Département";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
-            // Supprimer
+            // visitorBindingSource
             // 
-            this.Supprimer.DataPropertyName = "id";
-            this.Supprimer.HeaderText = "Supprimer";
-            this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Text = "Supprimer";
-            this.Supprimer.UseColumnTextForButtonValue = true;
+            this.visitorBindingSource.DataSource = typeof(Models.src.metiers.Visitor);
+            // 
+            // visitorBuildBindingSource
+            // 
+            this.visitorBuildBindingSource.DataSource = typeof(Models.src.build.VisitorBuild);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(412, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -309,9 +321,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBuildBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -347,6 +359,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn recruitmentdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Supprimer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

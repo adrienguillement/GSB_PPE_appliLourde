@@ -64,5 +64,17 @@ namespace GSB_PPE
         {
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int visitor_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+            VisitorBuild visitor = new VisitorBuild();
+            TextResult result = visitor.delete(visitor_id);
+
+            dataGridView1.DataSource = null;
+            this.listVisitor = visitor.findAll();
+            this.dataGridView1.DataSource = listVisitor;
+        }
     }
 }

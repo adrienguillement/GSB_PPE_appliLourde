@@ -44,5 +44,13 @@ namespace Models.src.build
 
             return result;
         }
+
+        public TextResult delete(int visitor_id)
+        {
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/"  + this._table + "/delete/" + visitor_id);
+            TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
+            return result;
+        }
     }
 }
