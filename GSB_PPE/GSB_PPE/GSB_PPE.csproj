@@ -81,7 +81,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AddVisitor.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\GSB_PPE.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\GSB_PPE.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Models.src.build.VisitorBuild.datasource" />
     <None Include="Properties\DataSources\Models.src.metiers.Visitor.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

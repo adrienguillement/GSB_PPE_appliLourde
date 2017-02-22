@@ -34,10 +34,6 @@ namespace GSB_PPE
             
             this.dataGridView1.DataSource = listVisitor;
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void last_name_visitor_TextChanged_1(object sender, EventArgs e)
         {
@@ -62,6 +58,11 @@ namespace GSB_PPE
             AddVisitor addVisitor = new AddVisitor();
             addVisitor.Show();
             this.Visible = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

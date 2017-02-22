@@ -13,7 +13,6 @@ namespace Models.src.metiers
         public string first_name { get; set; }
         public string address { get; set; }
         public string recruitment_date { get; set; }
-        public string departement_id { get; set; }
-        public string member_id { get; set; }
+        public string name { get; set; }
     }
 }
