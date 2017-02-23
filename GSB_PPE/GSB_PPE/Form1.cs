@@ -67,14 +67,30 @@ namespace GSB_PPE
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int visitor_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            if (e.ColumnIndex == dataGridView1.Columns["Supprimer"].Index && e.RowIndex >= 0)
+            {
+                int visitor_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
 
-            VisitorBuild visitor = new VisitorBuild();
-            TextResult result = visitor.delete(visitor_id);
+                VisitorBuild visitor = new VisitorBuild();
+                TextResult result = visitor.delete(visitor_id);
 
-            dataGridView1.DataSource = null;
-            this.listVisitor = visitor.findAll();
-            this.dataGridView1.DataSource = listVisitor;
+                dataGridView1.DataSource = null;
+                this.listVisitor = visitor.findAll();
+                this.dataGridView1.DataSource = listVisitor;
+            }
+            else if (e.ColumnIndex == dataGridView1.Columns["Modifier"].Index && e.RowIndex >= 0)
+            {
+                int visitor_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
+                updateVisitor updateVisitor = new updateVisitor(visitor_id);
+                updateVisitor.Show();
+                this.Visible = false;
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,12 +28,12 @@ namespace Models.src.build
             return listClass;
         }
 
-        public Visitor findOne(int id)
+        public Visitor findOne(String id)
         {
             WebClient client = new WebClient();
             string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/" + id);
-            Visitor listClass = JsonConvert.DeserializeObject<Visitor>(getJson);
-            return listClass;
+            List<Visitor> listClass = JsonConvert.DeserializeObject<List<Visitor>>(getJson);
+            return listClass[0];
         }
 
         public TextResult addOne(String last_name, String first_name, String address, String recrutementDate, String departement_id, String member_id)
@@ -49,6 +49,15 @@ namespace Models.src.build
         {
             WebClient client = new WebClient();
             string getJson = client.DownloadString("http://adrienguillement.fr/GSB/"  + this._table + "/delete/" + visitor_id);
+            TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
+            return result;
+        }
+
+        public TextResult update(int id, string lastname, string firstname, string address, string recrutementDate, int departement_id, int member_id = 1)
+        {
+            address = address.Replace("\n", "");
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/update/" + id + "/"+ lastname +"/"+ firstname +"/"+address+"/"+recrutementDate+"/"+departement_id+"/"+member_id);
             TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
             return result;
         }

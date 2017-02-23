@@ -14,8 +14,6 @@ namespace GSB_PPE
 {
     public partial class AddVisitor : Form
     {
-        private List<Visitor> listVisitor;
-
         public AddVisitor()
         {
             InitializeComponent();
@@ -49,8 +47,6 @@ namespace GSB_PPE
                                      MessageBoxButtons.OK,
                                      MessageBoxIcon.Information);
             }
-            
-
         }
     }
 }

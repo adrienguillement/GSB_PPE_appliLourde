@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.newVisitorButton = new System.Windows.Forms.Button();
             this.recruitment_date = new System.Windows.Forms.TextBox();
             this.recruitment = new System.Windows.Forms.Label();
@@ -40,6 +41,15 @@
             this.last_name = new System.Windows.Forms.Label();
             this.last_name_visitor = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recruitmentdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modifier = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,22 +58,13 @@
             this.firstNameDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notorietyCoefDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recruitmentdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.visitorBuildBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBuildBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(972, 426);
+            this.tabControl1.Size = new System.Drawing.Size(1105, 426);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -92,10 +93,20 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(964, 400);
+            this.tabPage1.Size = new System.Drawing.Size(1097, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visiteurs";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(412, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // newVisitorButton
             // 
@@ -109,7 +120,7 @@
             // 
             // recruitment_date
             // 
-            this.recruitment_date.Location = new System.Drawing.Point(125, 198);
+            this.recruitment_date.Location = new System.Drawing.Point(110, 198);
             this.recruitment_date.Name = "recruitment_date";
             this.recruitment_date.Size = new System.Drawing.Size(100, 20);
             this.recruitment_date.TabIndex = 7;
@@ -118,7 +129,7 @@
             // recruitment
             // 
             this.recruitment.AutoSize = true;
-            this.recruitment.Location = new System.Drawing.Point(9, 201);
+            this.recruitment.Location = new System.Drawing.Point(3, 201);
             this.recruitment.Name = "recruitment";
             this.recruitment.Size = new System.Drawing.Size(110, 13);
             this.recruitment.TabIndex = 6;
@@ -126,7 +137,7 @@
             // 
             // first_name_visitor
             // 
-            this.first_name_visitor.Location = new System.Drawing.Point(125, 149);
+            this.first_name_visitor.Location = new System.Drawing.Point(110, 149);
             this.first_name_visitor.Name = "first_name_visitor";
             this.first_name_visitor.Size = new System.Drawing.Size(100, 20);
             this.first_name_visitor.TabIndex = 5;
@@ -135,7 +146,7 @@
             // first_name
             // 
             this.first_name.AutoSize = true;
-            this.first_name.Location = new System.Drawing.Point(69, 152);
+            this.first_name.Location = new System.Drawing.Point(3, 152);
             this.first_name.Name = "first_name";
             this.first_name.Size = new System.Drawing.Size(49, 13);
             this.first_name.TabIndex = 4;
@@ -154,7 +165,7 @@
             // last_name
             // 
             this.last_name.AutoSize = true;
-            this.last_name.Location = new System.Drawing.Point(83, 101);
+            this.last_name.Location = new System.Drawing.Point(3, 98);
             this.last_name.Name = "last_name";
             this.last_name.Size = new System.Drawing.Size(35, 13);
             this.last_name.TabIndex = 2;
@@ -162,7 +173,7 @@
             // 
             // last_name_visitor
             // 
-            this.last_name_visitor.Location = new System.Drawing.Point(125, 98);
+            this.last_name_visitor.Location = new System.Drawing.Point(110, 91);
             this.last_name_visitor.Name = "last_name_visitor";
             this.last_name_visitor.Size = new System.Drawing.Size(100, 20);
             this.last_name_visitor.TabIndex = 1;
@@ -170,6 +181,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -179,14 +192,82 @@
             this.addressDataGridViewTextBoxColumn,
             this.recruitmentdateDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
+            this.Modifier,
             this.Supprimer});
             this.dataGridView1.DataSource = this.visitorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(231, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(216, 91);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(727, 282);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(850, 282);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Prénom";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Addresse";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // recruitmentdateDataGridViewTextBoxColumn
+            // 
+            this.recruitmentdateDataGridViewTextBoxColumn.DataPropertyName = "recruitment_date";
+            this.recruitmentdateDataGridViewTextBoxColumn.HeaderText = "Date de recrutement";
+            this.recruitmentdateDataGridViewTextBoxColumn.Name = "recruitmentdateDataGridViewTextBoxColumn";
+            this.recruitmentdateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Département";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Modifier
+            // 
+            this.Modifier.DataPropertyName = "id";
+            this.Modifier.HeaderText = "Modifier";
+            this.Modifier.Name = "Modifier";
+            this.Modifier.ReadOnly = true;
+            this.Modifier.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Modifier.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Modifier.Text = "Modifier";
+            this.Modifier.UseColumnTextForButtonValue = true;
+            // 
+            // Supprimer
+            // 
+            this.Supprimer.DataPropertyName = "id";
+            this.Supprimer.HeaderText = "Supprimer";
+            this.Supprimer.Name = "Supprimer";
+            this.Supprimer.ReadOnly = true;
+            this.Supprimer.Text = "Supprimer";
+            this.Supprimer.UseColumnTextForButtonValue = true;
+            // 
+            // visitorBindingSource
+            // 
+            this.visitorBindingSource.DataSource = typeof(Models.src.metiers.Visitor);
             // 
             // tabPage2
             // 
@@ -194,7 +275,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(964, 400);
+            this.tabPage2.Size = new System.Drawing.Size(1097, 400);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Docteurs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -247,72 +328,15 @@
             this.notorietyCoefDoctor.HeaderText = "Coefficient de notoriété";
             this.notorietyCoefDoctor.Name = "notorietyCoefDoctor";
             // 
-            // Supprimer
-            // 
-            this.Supprimer.DataPropertyName = "id";
-            this.Supprimer.HeaderText = "Supprimer";
-            this.Supprimer.Name = "Supprimer";
-            this.Supprimer.Text = "Supprimer";
-            this.Supprimer.UseColumnTextForButtonValue = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "Prénom";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Addresse";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // recruitmentdateDataGridViewTextBoxColumn
-            // 
-            this.recruitmentdateDataGridViewTextBoxColumn.DataPropertyName = "recruitment_date";
-            this.recruitmentdateDataGridViewTextBoxColumn.HeaderText = "Date de recrutement";
-            this.recruitmentdateDataGridViewTextBoxColumn.Name = "recruitmentdateDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Département";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // visitorBindingSource
-            // 
-            this.visitorBindingSource.DataSource = typeof(Models.src.metiers.Visitor);
-            // 
             // visitorBuildBindingSource
             // 
             this.visitorBuildBindingSource.DataSource = typeof(Models.src.build.VisitorBuild);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(412, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(1129, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "GSB";
@@ -321,9 +345,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBuildBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -352,14 +376,15 @@
         private System.Windows.Forms.Label recruitment;
         private System.Windows.Forms.Button newVisitorButton;
         private System.Windows.Forms.BindingSource visitorBuildBindingSource;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn recruitmentdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Modifier;
         private System.Windows.Forms.DataGridViewButtonColumn Supprimer;
-        private System.Windows.Forms.Button button1;
     }
 }
 

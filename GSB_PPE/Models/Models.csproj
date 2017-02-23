@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\build\DepartementBuild.cs" />
     <Compile Include="src\build\VisitorBuild.cs" />
+    <Compile Include="src\metiers\Departement.cs" />
     <Compile Include="src\metiers\Visitor.cs" />
     <Compile Include="src\build\TextResult.cs" />
   </ItemGroup>

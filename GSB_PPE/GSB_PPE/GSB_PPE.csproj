@@ -65,6 +65,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updateVisitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateVisitor.Designer.cs">
+      <DependentUpon>updateVisitor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddVisitor.resx">
       <DependentUpon>AddVisitor.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="updateVisitor.resx">
+      <DependentUpon>updateVisitor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AddVisitor.datasource" />
     <None Include="Properties\DataSources\Form1.datasource" />
