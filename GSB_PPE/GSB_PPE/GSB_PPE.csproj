@@ -95,6 +95,7 @@
     <None Include="Properties\DataSources\GSB_PPE.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\GSB_PPE.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\Models.src.build.VisitorBuild.datasource" />
+    <None Include="Properties\DataSources\Models.src.metiers.ExpenseReport.datasource" />
     <None Include="Properties\DataSources\Models.src.metiers.Visitor.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">

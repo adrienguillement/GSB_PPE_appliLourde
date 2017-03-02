@@ -15,6 +15,7 @@ namespace GSB_PPE
 {
     public partial class Form1 : Form
     {
+        private List<ExpenseReport> listExpenseReport;
         private List<Visitor> listVisitor;
 
         public Form1()
@@ -33,6 +34,11 @@ namespace GSB_PPE
             this.listVisitor = visitor.findAll();
             
             this.dataGridView1.DataSource = listVisitor;
+
+            ExpenseReportBuild expenseReport = new ExpenseReportBuild();
+            this.listExpenseReport = expenseReport.findAll();
+
+            this.dataGridView2.DataSource = listExpenseReport;
         }
 
         private void last_name_visitor_TextChanged_1(object sender, EventArgs e)
