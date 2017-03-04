@@ -41,6 +41,7 @@ namespace GSB_PPE
             this.dataGridView2.DataSource = listExpenseReport;
 
             this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
+
         }
 
         private void last_name_visitor_TextChanged_1(object sender, EventArgs e)
