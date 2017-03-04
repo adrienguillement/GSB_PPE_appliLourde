@@ -39,6 +39,8 @@ namespace GSB_PPE
             this.listExpenseReport = expenseReport.findAll();
 
             this.dataGridView2.DataSource = listExpenseReport;
+
+            this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
         }
 
         private void last_name_visitor_TextChanged_1(object sender, EventArgs e)
@@ -95,6 +97,11 @@ namespace GSB_PPE
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visitorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
