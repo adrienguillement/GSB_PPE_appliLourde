@@ -42,7 +42,10 @@ namespace GSB_PPE
 
             this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
 
+            var months = new[] { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" };
+            this.dateComboBox.DataSource = months;
         }
+
 
         private void last_name_visitor_TextChanged_1(object sender, EventArgs e)
         {
@@ -105,6 +108,12 @@ namespace GSB_PPE
         private void visitorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void filterFullName_TextChanged(object sender, EventArgs e)
+        {
+            List<Visitor> filtered = this.listVisitor.FindAll(x => x.full_name.Contains(filterFullName.Text));
+            this.visitorComboBox.DataSource = filtered.Select(c => c.full_name).ToList();
         }
     }
 }

@@ -52,10 +52,9 @@
     <Compile Include="src\metiers\Departement.cs" />
     <Compile Include="src\metiers\Visitor.cs" />
     <Compile Include="src\build\TextResult.cs" />
+    <Compile Include="tools\Tools.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="tools\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
