@@ -38,6 +38,15 @@ namespace Models.src.build
             return listClass[0];
         }
 
+        //find one Visitor by lastName and firstName
+        public Visitor findOneByName(String last_name, String first_name)
+        {
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString(path_api + this._table + "/" + last_name + "/" + first_name);
+            List<Visitor> listClass = JsonConvert.DeserializeObject<List<Visitor>>(getJson);
+            return listClass[0];
+        }
+
         public TextResult addOne(String last_name, String first_name, String address, String recrutementDate, String departement_id, String member_id)
         {
             WebClient client = new WebClient();

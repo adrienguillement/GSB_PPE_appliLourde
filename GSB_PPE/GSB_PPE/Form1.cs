@@ -17,6 +17,7 @@ namespace GSB_PPE
     {
         private List<ExpenseReport> listExpenseReport;
         private List<Visitor> listVisitor;
+        private Visitor oneVisitor;
 
         public Form1()
         {
@@ -39,11 +40,10 @@ namespace GSB_PPE
             this.listExpenseReport = expenseReport.findAll();
 
             this.dataGridView2.DataSource = listExpenseReport;
-
             this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
 
-            var months = new[] { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" };
-            this.dateComboBox.DataSource = months;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "MM/yyyy";
         }
 
 
@@ -114,6 +114,17 @@ namespace GSB_PPE
         {
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.full_name.Contains(filterFullName.Text));
             this.visitorComboBox.DataSource = filtered.Select(c => c.full_name).ToList();
+        }
+
+        private void validFicheFraisComboBox_Click(object sender, EventArgs e)
+        {
+            string visitorFullName = visitorComboBox.Text;
+            string[] visitorExplodeName = visitorFullName.Split(' ');
+
+            VisitorBuild visitor = new VisitorBuild();
+            this.oneVisitor = visitor.findOneByName(visitorExplodeName[0], visitorExplodeName[1]);
+
+            filterFullName.Text = oneVisitor.address;
         }
     }
 }
