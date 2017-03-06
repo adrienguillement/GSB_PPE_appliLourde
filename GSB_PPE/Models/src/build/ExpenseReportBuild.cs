@@ -8,12 +8,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Models.src.metiers;
 using Models.src.build;
+using System.Configuration;
 
 namespace Models.src.build
 {
     public class ExpenseReportBuild
     {
         protected string _table;
+        private string path_api = ConfigurationManager.AppSettings["path_api"];
 
         public ExpenseReportBuild()
         {
@@ -23,7 +25,7 @@ namespace Models.src.build
         public List<ExpenseReport> findAll()
         {
             WebClient client = new WebClient();
-            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/all");
+            string getJson = client.DownloadString(path_api + this._table + "/all");
             List<ExpenseReport> listClass = JsonConvert.DeserializeObject<List<ExpenseReport>>(getJson);
             return listClass;
         }
