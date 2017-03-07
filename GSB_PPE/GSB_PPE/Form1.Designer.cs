@@ -50,6 +50,7 @@
             this.Supprimer = new System.Windows.Forms.DataGridViewButtonColumn();
             this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.filterFullName = new System.Windows.Forms.TextBox();
             this.validFicheFraisComboBox = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,7 +64,7 @@
             this.montanthorsclassifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.visitorBuildBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -267,6 +268,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.filterFullName);
             this.tabPage2.Controls.Add(this.validFicheFraisComboBox);
@@ -281,6 +283,13 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(104, 72);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // filterFullName
             // 
@@ -383,12 +392,13 @@
             // 
             this.visitorBuildBindingSource.DataSource = typeof(Models.src.build.VisitorBuild);
             // 
-            // dateTimePicker1
+            // textBox1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(104, 72);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox1.Location = new System.Drawing.Point(308, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
             // 
             // Form1
             // 
@@ -450,6 +460,7 @@
         private System.Windows.Forms.Button validFicheFraisComboBox;
         private System.Windows.Forms.TextBox filterFullName;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

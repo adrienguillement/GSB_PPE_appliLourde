@@ -42,8 +42,13 @@ namespace GSB_PPE
             this.dataGridView2.DataSource = listExpenseReport;
             this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
 
+
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "MM/yyyy";
+            DateTime now = DateTime.Now;
+            dateTimePicker1.MinDate = now;
+            now = now.AddYears(1);
+            dateTimePicker1.MaxDate = now;
         }
 
 
@@ -114,6 +119,8 @@ namespace GSB_PPE
         {
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.full_name.Contains(filterFullName.Text));
             this.visitorComboBox.DataSource = filtered.Select(c => c.full_name).ToList();
+
+            //textBox1.AutoCompleteCustomSource = filtered.Select(c => c.full_name).ToList();
         }
 
         private void validFicheFraisComboBox_Click(object sender, EventArgs e)
