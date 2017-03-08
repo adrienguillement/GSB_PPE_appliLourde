@@ -23,12 +23,15 @@ namespace ModernUINavigationApp1.Pages
     public partial class BasicPage : UserControl
     {
         private List<Visitor> listVisitor;
+        private String filterLastName;
 
         public BasicPage()
         {
             VisitorBuild visitor = new VisitorBuild();
             this.listVisitor = visitor.findAll();
+
             this.DataContext = listVisitor;
+            
             InitializeComponent();
         }
 
@@ -54,6 +57,14 @@ namespace ModernUINavigationApp1.Pages
         {
             var textBox = sender as TextBox;
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.last_name.Contains(textBox.Text));
+            this.DataContext = filtered;
+            filterLastName = textBox.Text;
+        }
+
+        private void TextBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            List<Visitor> filtered = this.listVisitor.FindAll(x => x.first_name.Contains(textBox.Text) && x.last_name.Contains(filterLastName));
             this.DataContext = filtered;
 
         }
