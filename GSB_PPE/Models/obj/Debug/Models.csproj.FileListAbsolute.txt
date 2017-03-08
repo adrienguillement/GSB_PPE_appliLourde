@@ -33,3 +33,7 @@ C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\Models\bin\Debug\Newt
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\Models\obj\Debug\Models.dll
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\Models\obj\Debug\Models.pdb
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\Models\bin\Debug\MahApps.Metro.dll
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\Models\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\Models\bin\Debug\MahApps.Metro.pdb
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\Models\bin\Debug\MahApps.Metro.xml

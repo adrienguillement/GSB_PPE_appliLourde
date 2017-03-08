@@ -307,7 +307,6 @@
             this.validFicheFraisComboBox.TabIndex = 5;
             this.validFicheFraisComboBox.Text = "Valider";
             this.validFicheFraisComboBox.UseVisualStyleBackColor = true;
-            this.validFicheFraisComboBox.Click += new System.EventHandler(this.validFicheFraisComboBox_Click);
             // 
             // label2
             // 

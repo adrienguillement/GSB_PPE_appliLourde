@@ -27,3 +27,6 @@ C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\bin\Debug\MahApps.Metro.pdb
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\bin\Debug\MahApps.Metro.xml
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\AddVisitor.baml
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\AddVisitor.g.cs
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.lref

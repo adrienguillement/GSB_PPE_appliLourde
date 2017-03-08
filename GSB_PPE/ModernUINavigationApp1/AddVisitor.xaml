@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ModernUINavigationApp1.AddVisitor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ModernUINavigationApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="406.725" d:DesignWidth="401">
+    <Grid>
+        <Button Click="saveVisitor_Click" Content="Enregistrer" HorizontalAlignment="Left" Margin="139,247,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="73,66,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="58,94,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse :" HorizontalAlignment="Left" Margin="57,122,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date recrutement :" HorizontalAlignment="Left" Margin="6,155,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dépatement ID :" HorizontalAlignment="Left" Margin="19,185,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type ID :" HorizontalAlignment="Left" Margin="58,213,0,0" VerticalAlignment="Top"/>
+        <TextBox TextChanged="lastName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <TextBox TextChanged="firstName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <TextBox TextChanged="address_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <TextBox TextChanged="departement_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <TextBox TextChanged="type_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <DatePicker  SelectedDateChanged="HiringDate_SelectedDateChanged" HorizontalAlignment="Left" Margin="114,143,0,0" VerticalAlignment="Top" Height="28" Width="159"/>
+
+    </Grid>
+</UserControl>

@@ -63,6 +63,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddVisitor.xaml.cs">
+      <DependentUpon>AddVisitor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -74,6 +77,11 @@
     <Compile Include="src\metiers\Departement.cs" />
     <Compile Include="src\metiers\ExpenseReport.cs" />
     <Compile Include="src\metiers\Visitor.cs" />
+    <Compile Include="src\Tools.cs" />
+    <Page Include="AddVisitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

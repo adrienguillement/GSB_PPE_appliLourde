@@ -71,3 +71,7 @@ C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\GSB_PPE\obj\Debug\GSB
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.Properties.Resources.resources
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.updateVisitor.resources
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde2\GSB_PPE\GSB_PPE\obj\Debug\GSB_PPE.csproj.GenerateResource.Cache
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\bin\Debug\MahApps.Metro.dll
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\bin\Debug\MahApps.Metro.pdb
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\GSB_PPE\bin\Debug\MahApps.Metro.xml

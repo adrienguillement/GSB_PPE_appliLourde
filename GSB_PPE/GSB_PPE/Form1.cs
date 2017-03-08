@@ -43,7 +43,6 @@ namespace GSB_PPE
             this.visitorComboBox.DataSource = listVisitor.Select(c => c.full_name).ToList();
 
             var months = new[] { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre" };
-            this.dateComboBox.DataSource = months;
         }
 
 
