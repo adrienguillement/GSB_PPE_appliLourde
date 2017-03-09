@@ -24,7 +24,7 @@ namespace ModernUINavigationApp1.Pages
     public partial class BasicPage : UserControl
     {
         private List<Visitor> listVisitor;
-        private String filterLastName;
+        private String filterLastName, filterFirstName;
 
         public BasicPage()
         {
@@ -38,31 +38,30 @@ namespace ModernUINavigationApp1.Pages
                 MessageBox.Show("Problème de connexion à l'api, vérifiez le lien dans les paramètres de l'application.");
 
             }
-
-
             this.DataContext = listVisitor;
-            
+
             InitializeComponent();
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void Button_Click(object sender, EventArgs e)
         {
-            //Get row clicked and store id in visitor_id
-            Visitor obj = ((FrameworkElement)sender).DataContext as Visitor;
-            int visitor_id = Convert.ToInt32(obj.id);
 
-            VisitorBuild visitor = new VisitorBuild();
-            TextResult result = visitor.delete(visitor_id);
+            MessageBoxResult messageBoxResult = MessageBox.Show("Vous êtes sur le point de supprimer le visiteur, voulez-vous continuer ?", "Supprimer ?", MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                //Get row clicked and store id in visitor_id
+                Visitor obj = ((FrameworkElement)sender).DataContext as Visitor;
+                int visitor_id = Convert.ToInt32(obj.id);
 
-            //Refresh datagrid to not display deleted visitor
-            this.DataContext = null;
-            this.listVisitor = visitor.findAll();
-            this.DataContext = listVisitor;
+                VisitorBuild visitor = new VisitorBuild();
+                TextResult result = visitor.delete(visitor_id);
+
+                //Refresh datagrid to not display deleted visitor
+                this.DataContext = null;
+                this.listVisitor = visitor.findAll();
+                this.DataContext = listVisitor;
+            }
+                
         }
 
         //If user wants to update visitor
@@ -79,7 +78,7 @@ namespace ModernUINavigationApp1.Pages
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             var textBox = sender as TextBox;
-            List<Visitor> filtered = this.listVisitor.FindAll(x => x.last_name.Contains(textBox.Text));
+            List<Visitor> filtered = this.listVisitor.FindAll(x => x.last_name.Contains(textBox.Text) && x.first_name.Contains(filterFirstName));
             this.DataContext = filtered;
             filterLastName = textBox.Text;
         }
@@ -90,6 +89,7 @@ namespace ModernUINavigationApp1.Pages
             var textBox = sender as TextBox;
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.first_name.Contains(textBox.Text) && x.last_name.Contains(filterLastName));
             this.DataContext = filtered;
+            filterFirstName = textBox.Text;
         }
 
         private void AddVisitor_Click(object sender, EventArgs e)

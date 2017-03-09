@@ -17,9 +17,20 @@
         <TextBox TextChanged="lastName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="firstName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="address_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
-        <TextBox TextChanged="departement_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
+        <TextBox TextChanged="departement_TextChanged" HorizontalAlignment="Left" Height="23" Margin="40,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="type_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <DatePicker  SelectedDateChanged="HiringDate_SelectedDateChanged" HorizontalAlignment="Left" Margin="114,143,0,0" VerticalAlignment="Top" Height="28" Width="159"/>
+
+        <ComboBox ItemsSource="{Binding Path=listDepartement}"
+                  DisplayMemberPath="name"
+                  SelectedValuePath="id"
+                  SelectedValue="1"
+                  HorizontalAlignment="Left" 
+                  Margin="114,179,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="159"  
+                  Name="cboDepartement" />
+
 
     </Grid>
 </UserControl>

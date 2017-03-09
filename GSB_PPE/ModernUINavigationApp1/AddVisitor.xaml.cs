@@ -1,7 +1,9 @@
 ﻿using FirstFloor.ModernUI.Windows.Controls;
 using Models.src.build;
+using Models.src.metiers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +21,25 @@ namespace ModernUINavigationApp1
 {
     public partial class AddVisitor : UserControl
     {
+        public List<Departement> listDepartement { get; set; }
         private String hiringDate, typeId, departement, address, firstName, lastName;
 
         public AddVisitor()
         {
+            
+            DepartementBuild departement = new DepartementBuild();
+            this.listDepartement = departement.findAll();
+
+            
             InitializeComponent();
+            DataContext = this;
         }
+        /*
+        private void cboDepartement_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string ID = this.cboDepartement.SelectedValue.ToString();
+            MessageBox.Show(ID.ToString());
+        }*/
 
         //On user select date store into attribut
         private void HiringDate_SelectedDateChanged(object sender,SelectionChangedEventArgs e)
@@ -73,7 +88,8 @@ namespace ModernUINavigationApp1
                 hiringDate = dateSplit[2] + "-" + dateSplit[1] + "-" + dateSplit[0];
             }
             catch { }
-            
+
+            departement = cboDepartement.SelectedValue.ToString();
             
             TextResult result = visitor.addOne(lastName, firstName, address, hiringDate, departement, typeId);
 

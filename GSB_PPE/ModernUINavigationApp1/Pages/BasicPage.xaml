@@ -22,8 +22,8 @@
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
-                                    <Button Foreground="Black" Click="Button_Click" Background="LightPink">Supprimer</Button>
-                                    <Button Foreground="Black" Background="DodgerBlue" Click="UpdateBtn_Click">Modifier</Button>
+                                    <Button Foreground="Black" Background="Red" Click="Button_Click">Supprimer</Button>
+                                    <Button Foreground="Black" Background="Azure" Click="UpdateBtn_Click">Modifier</Button>
                                 </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
