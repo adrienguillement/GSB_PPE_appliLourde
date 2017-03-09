@@ -5,16 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="380" d:DesignWidth="594">
-    <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,168">
-        <ScrollViewer Margin="0,0,0,85">
-            <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" Height="182" VerticalAlignment="Top" AutoGenerateColumns="False">
+             d:DesignHeight="495" d:DesignWidth="594">
+    <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,138">
+        <ScrollViewer Margin="0,0,0,7" RenderTransformOrigin="0.5,0.5">
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.233"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.496"/>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
+            <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" Height="312" VerticalAlignment="Top" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical">
-                                    <Button Foreground="Black" Background="LightPink" Click="Button_Click">Supprimer</Button>
+                                    <Button Foreground="Black" Click="Button_Click" Background="LightPink">Supprimer</Button>
+                                    <Button Foreground="Black" Background="DodgerBlue" Click="UpdateBtn_Click">Modifier</Button>
                                 </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
@@ -28,11 +37,11 @@
                 </DataGrid.Columns>
             </DataGrid>
         </ScrollViewer>
-        <TextBox TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="0,215,0,-54" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="Nom : " HorizontalAlignment="Left" Height="14" Margin="0,196,0,-26" VerticalAlignment="Top" Width="40"/>
-        <TextBox TextChanged="TextBox2_TextChanged" HorizontalAlignment="Left" Height="23" Margin="135,215,0,-54" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Prénom : " HorizontalAlignment="Left" Height="14" Margin="135,196,0,-26" VerticalAlignment="Top" Width="53"/>
-        <Button Click="AddVisitor_Click" Content="Ajouter un Visiteur" HorizontalAlignment="Left" Height="34" Margin="0,265,0,-115" VerticalAlignment="Top" Width="166"/>
+        <TextBox TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Height="23" Margin="0,348,0,-72" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Nom : " HorizontalAlignment="Left" Height="14" Margin="0,330,0,-45" VerticalAlignment="Top" Width="40"/>
+        <TextBox TextChanged="TextBox2_TextChanged" HorizontalAlignment="Left" Height="23" Margin="125,348,0,-72" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Prénom : " HorizontalAlignment="Left" Height="14" Margin="125,329,0,-44" VerticalAlignment="Top" Width="53"/>
+        <Button Click="AddVisitor_Click" Content="Ajouter un Visiteur" HorizontalAlignment="Left" Height="34" Margin="0,391,0,-126" VerticalAlignment="Top" Width="166"/>
 
     </Grid>
 </UserControl>

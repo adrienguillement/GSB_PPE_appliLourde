@@ -30,3 +30,6 @@ C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\AddVisitor.baml
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\AddVisitor.g.cs
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.lref
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\bin\Debug\ModernUINavigationApp1.exe.config
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\Pages\Settings\LinkApi.baml
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\Pages\Settings\LinkApi.g.cs

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ModernUINavigationApp1.LinkApi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,10">
+        <ScrollViewer Margin="0,0,0,10">
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Lien vers l'api" Style="{StaticResource Heading2}" />
+                <TextBox TextChanged="TxtLinkApi_TextChanged" Height="23" Text="{Binding pathAPI}" Width="120" Margin="72,33,76,-40"/>
+                <Button Click="BtnLinkApi_Click" Content="Enregistrer" Height="29" Width="120" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin="0,60,0,0"/>
+
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -7,10 +7,10 @@
         ContentSource="/Pages/Home.xaml">
 
     <mui:ModernWindow.MenuLinkGroups>
-        <mui:LinkGroup DisplayName="Bonjour">
+        <mui:LinkGroup DisplayName="">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/Home.xaml" />
-                <mui:Link DisplayName="Comptables" Source="/Pages/BasicPage.xaml" />
+                <mui:Link DisplayName="Comptables" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/BasicPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
