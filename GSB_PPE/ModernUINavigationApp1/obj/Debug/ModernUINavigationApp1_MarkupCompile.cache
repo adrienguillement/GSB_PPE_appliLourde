@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\obj\Debug\
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde3\GSB_PPE\ModernUINavigationApp1\obj\Debug\
 ModernUINavigationApp1
 none
 false
 DEBUG;TRACE
-C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\App.xaml
-9-982995115
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde3\GSB_PPE\ModernUINavigationApp1\App.xaml
+9-618212472
 
-2014892299
-18-262706321
-Pages\Visitor\AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\Visitor\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;Pages\Visitor\UpdateVisitor.xaml;
+20-386272210
+181113183460
+Pages\Login.xaml;Pages\Visitor\AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\SettingsPage.xaml;Pages\Visitor\UpdateVisitor.xaml;
 
-True
+False
 

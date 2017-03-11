@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.src.build;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,18 @@ using System.Windows.Shapes;
 namespace ModernUINavigationApp1.Pages
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class Login : UserControl
     {
-        public Home()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void Connect_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

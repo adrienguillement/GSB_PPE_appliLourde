@@ -64,6 +64,16 @@ namespace ModernUINavigationApp1.Pages
                 
         }
 
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            VisitorBuild visitor = new VisitorBuild();
+
+            //Refresh datagrid to not display deleted or updated visitor
+            this.DataContext = null;
+            this.listVisitor = visitor.findAll();
+            this.DataContext = listVisitor;
+        }
+
         //If user wants to update visitor
         private void UpdateBtn_Click(object sender, EventArgs e)
         {

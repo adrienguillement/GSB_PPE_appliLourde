@@ -4,13 +4,13 @@
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="GSB" IsTitleVisible="True"
         LogoData=""          
-        ContentSource="/Pages/Home.xaml">
+        ContentSource="/Pages/Login.xaml">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Comptables" Source="/Pages/Home.xaml" />
-                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/Visitor/BasicPage.xaml" />
+                <mui:Link DisplayName="Comptables" Source="/Pages/Login.xaml" />
+                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/BasicPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
