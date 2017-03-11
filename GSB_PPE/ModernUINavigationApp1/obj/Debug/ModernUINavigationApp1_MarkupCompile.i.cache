@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde\GSB_PPE\ModernUINavigationApp1\App.xaml
-8-193687501
+9-982995115
 
-23806662589
+241131130327
 18-262706321
-AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
+Pages\Visitor\AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\Visitor\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;Pages\Visitor\UpdateVisitor.xaml;
 
-True
+False
 

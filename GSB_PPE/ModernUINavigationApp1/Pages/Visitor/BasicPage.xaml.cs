@@ -71,7 +71,11 @@ namespace ModernUINavigationApp1.Pages
             Visitor obj = ((FrameworkElement)sender).DataContext as Visitor;
             int visitor_id = Convert.ToInt32(obj.id);
 
-            MessageBox.Show("Actuellement en construction", "Soyez patient");
+            //create and show new window to add new visitor
+            UpdateVisitor visitor = new UpdateVisitor(visitor_id);
+            var host = new Window();
+            host.Content = visitor;
+            host.Show();
         }
 
         //user compete textBox for lastName to filter datagrid

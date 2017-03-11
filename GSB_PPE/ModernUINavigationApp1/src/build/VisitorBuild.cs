@@ -56,7 +56,7 @@ namespace Models.src.build
             return result;
         }
 
-        public TextResult update(int id, string lastname, string firstname, string address, string recrutementDate, int departement_id, int member_id = 1)
+        public TextResult update(string id, string lastname, string firstname, string address, string recrutementDate, string departement_id, string member_id)
         {
             address = address.Replace("\n", "");
             WebClient client = new WebClient();

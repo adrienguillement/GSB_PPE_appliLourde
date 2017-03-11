@@ -12,12 +12,11 @@
         <Label Content="Prénom :" HorizontalAlignment="Left" Margin="58,94,0,0" VerticalAlignment="Top"/>
         <Label Content="Adresse :" HorizontalAlignment="Left" Margin="57,122,0,0" VerticalAlignment="Top"/>
         <Label Content="Date recrutement :" HorizontalAlignment="Left" Margin="6,155,0,0" VerticalAlignment="Top"/>
-        <Label Content="Dépatement ID :" HorizontalAlignment="Left" Margin="19,185,0,0" VerticalAlignment="Top"/>
+        <Label Content="Département :" HorizontalAlignment="Left" Margin="19,185,0,0" VerticalAlignment="Top"/>
         <Label Content="Type ID :" HorizontalAlignment="Left" Margin="58,213,0,0" VerticalAlignment="Top"/>
         <TextBox TextChanged="lastName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="firstName_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="address_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
-        <TextBox TextChanged="departement_TextChanged" HorizontalAlignment="Left" Height="23" Margin="40,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <TextBox TextChanged="type_TextChanged" HorizontalAlignment="Left" Height="23" Margin="114,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159"/>
         <DatePicker  SelectedDateChanged="HiringDate_SelectedDateChanged" HorizontalAlignment="Left" Margin="114,143,0,0" VerticalAlignment="Top" Height="28" Width="159"/>
 
@@ -30,6 +29,7 @@
                   VerticalAlignment="Top" 
                   Width="159"  
                   Name="cboDepartement" />
+        <Label Content="Ajouter un visiteur :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
 
 
     </Grid>

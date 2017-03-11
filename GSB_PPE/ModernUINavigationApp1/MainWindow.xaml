@@ -10,7 +10,7 @@
         <mui:LinkGroup DisplayName="">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Comptables" Source="/Pages/Home.xaml" />
-                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/BasicPage.xaml" />
+                <mui:Link DisplayName="Ressources Humaines" Source="/Pages/Visitor/BasicPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
