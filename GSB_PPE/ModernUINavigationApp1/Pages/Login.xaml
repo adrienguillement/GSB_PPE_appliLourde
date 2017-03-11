@@ -11,7 +11,7 @@
             <StackPanel MinWidth="200">
                 <TextBlock Text="Connexion :" Style="{StaticResource Heading2}" />
                 <TextBlock TextWrapping="Wrap" Text="E-mail :"/>
-                <TextBox x:Name="mailTxtBox"></TextBox>
+                <TextBox x:Name="mailTxtBox">guillaume.brunel@swiss-galaxy.com</TextBox>
                 
                 <TextBlock TextWrapping="Wrap" Text="Mot de passe :"/>
                 <PasswordBox x:Name="passwordTxtBox"></PasswordBox>
