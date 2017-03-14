@@ -1,5 +1,4 @@
-﻿using Models.src.build;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Pages
+namespace ModernUINavigationApp1.Pages.Comptables
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Comptables.xaml
     /// </summary>
-    public partial class Login : UserControl
+    public partial class Comptables : UserControl
     {
-        public Login()
+        public Comptables()
         {
             InitializeComponent();
-        }
-
-        private void Connect_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

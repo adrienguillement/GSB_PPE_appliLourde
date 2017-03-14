@@ -4,7 +4,7 @@
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="GSB" IsTitleVisible="True"
         LogoData=""          
-        ContentSource="/Pages/Login.xaml">
+        ContentSource="/Pages/Comptables/Login.xaml">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="">

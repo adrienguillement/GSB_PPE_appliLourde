@@ -114,5 +114,10 @@ namespace GSB_PPE
             List<Visitor> filtered = this.listVisitor.FindAll(x => x.full_name.Contains(filterFullName.Text));
             this.visitorComboBox.DataSource = filtered.Select(c => c.full_name).ToList();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
