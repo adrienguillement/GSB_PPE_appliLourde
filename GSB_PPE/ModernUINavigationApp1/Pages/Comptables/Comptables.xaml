@@ -9,7 +9,9 @@
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="BASIC PAGE" Style="{StaticResource Heading2}" />
+                <TextBlock Text="Comptables" Style="{StaticResource Heading2}" />
+                <TextBlock Text="Sélectionner une date :"></TextBlock>
+                <DatePicker x:Name="calendarPicker"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

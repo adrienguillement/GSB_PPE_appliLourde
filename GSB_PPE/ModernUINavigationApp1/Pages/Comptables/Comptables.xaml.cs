@@ -22,6 +22,15 @@ namespace ModernUINavigationApp1.Pages.Comptables
     {
         public Comptables()
         {
+
+
+            var myDate = DateTime.Now;
+            var newDate = myDate.AddYears(-1);
+
+
+            //calendarPicker.DisplayDateStart = newDate;
+
+
             InitializeComponent();
         }
     }

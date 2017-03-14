@@ -9,7 +9,7 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Comptables" Source="/Pages/Login.xaml" />
+                <mui:Link DisplayName="Comptables" Source="/Pages/Comptables/Login.xaml" />
                 <mui:Link DisplayName="Ressources Humaines" Source="/Pages/BasicPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
