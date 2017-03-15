@@ -15,7 +15,6 @@ namespace Models.src.build
     public class VisitorBuild
     {
         protected string _table;
-
         private string pathAPI = ConfigurationManager.AppSettings.Get("path_API");
 
         public VisitorBuild()
@@ -51,7 +50,7 @@ namespace Models.src.build
         public TextResult delete(int visitor_id)
         {
             WebClient client = new WebClient();
-            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/"  + this._table + "/delete/" + visitor_id);
+            string getJson = client.DownloadString(pathAPI  + this._table + "/delete/" + visitor_id);
             TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
             return result;
         }

@@ -34,6 +34,16 @@
 
                 <DataGrid x:Name="datagridExpense" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" CanUserAddRows="false">
                     <DataGrid.Columns>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <Button Foreground="Black" Background="Red" Click="DeleteBtn_Click">Supprimer</Button>
+                                        <Button Foreground="Black" Background="Azure" Click="UpdateBtn_Click">Modifier</Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                         <DataGridTextColumn Header="id" Binding="{Binding id}"/>
                         <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
                         <DataGridTextColumn Header="Nom" Binding="{Binding name}"/>

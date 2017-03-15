@@ -63,5 +63,15 @@ namespace ModernUINavigationApp1.Pages.Comptables
             this.listExpenseLine = expenseLine.findOne(listExpenseReport[0].id.ToString());
             datagridExpense.DataContext = listExpenseLine;
         }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
