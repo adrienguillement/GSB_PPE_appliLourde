@@ -105,12 +105,14 @@
     <Compile Include="src\build\DepartementBuild.cs" />
     <Compile Include="src\build\ExpenseLineBuild.cs" />
     <Compile Include="src\build\ExpenseReportBuild.cs" />
+    <Compile Include="src\build\FollowBuild.cs" />
     <Compile Include="src\build\textResult.cs" />
     <Compile Include="src\build\MemberBuild.cs" />
     <Compile Include="src\build\VisitorBuild.cs" />
     <Compile Include="src\metiers\Departement.cs" />
     <Compile Include="src\metiers\ExpenseLine.cs" />
     <Compile Include="src\metiers\ExpenseReport.cs" />
+    <Compile Include="src\metiers\Follow.cs" />
     <Compile Include="src\metiers\Member.cs" />
     <Compile Include="src\metiers\Visitor.cs" />
     <Compile Include="src\Tools.cs" />

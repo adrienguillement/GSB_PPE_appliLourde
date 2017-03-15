@@ -31,7 +31,7 @@
 
                 <Button x:Name="btnFilter" Click="filterBtn_Click" Content="Rechercher" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <!-- filter button -->
-
+                <Button x:Name="btnRefresh" Click="refreshBtn_Click" Content="Recharger le tableau" HorizontalAlignment="Left"></Button>
                 <DataGrid x:Name="datagridExpense" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" CanUserAddRows="false">
                     <DataGrid.Columns>
                         <DataGridTemplateColumn>
@@ -52,6 +52,7 @@
                         <DataGridTextColumn Header="Expense Report" Binding="{Binding expense_report_id}"/>
                     </DataGrid.Columns>
                 </DataGrid>
+                <Button x:Name="btnValidate" Click="ValidateBtn_Click" Content="Valider la fiche" HorizontalAlignment="Left"  VerticalAlignment="Bottom"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

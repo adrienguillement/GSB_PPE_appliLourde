@@ -46,13 +46,19 @@ namespace ModernUINavigationApp1.Pages.Comptables
         //if user click on update button
         private void UpdateExpenseLine_Click(object sender, EventArgs e)
         {
-
+            try
+            {
                 //update call method
                 ExpenseLineBuild expenseLine = new ExpenseLineBuild();
                 this.textResultUpdate = expenseLine.update(this.listExpenseLine[0].id, this.listExpenseLine[0].type,
                                                             expenseLineName.Text, calendarPicker.SelectedDate.ToString(),
                                                             expenseLineAmount.Text, this.listExpenseLine[0].expense_report_id);
-
+                MessageBox.Show("La modification à bien été effectué.");
+            }
+            catch
+            {
+                MessageBox.Show("Une erreur est survenue.");
+            }
             
         }
     }

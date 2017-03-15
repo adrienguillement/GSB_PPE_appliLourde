@@ -28,7 +28,9 @@ namespace ModernUINavigationApp1.Pages.Comptables
 
         private List<ExpenseReport> listExpenseReport;
         private List<ExpenseLine> listExpenseLine;
-        private TextResult textResult;
+        private TextResult textResult, expenseReportUpState;
+        //expenseReportUpState is the statement update for expense report
+        private String expenseReportId;
 
         private String dateInput, visitor_id;
 
@@ -40,6 +42,9 @@ namespace ModernUINavigationApp1.Pages.Comptables
             InitializeComponent();
 
             datagridExpense.Visibility = Visibility.Hidden;
+            btnRefresh.Visibility = Visibility.Hidden;
+            btnValidate.Visibility = Visibility.Hidden;
+
             DataContext = this;
         }
 
@@ -48,6 +53,9 @@ namespace ModernUINavigationApp1.Pages.Comptables
         {
             //hide and show some components
             datagridExpense.Visibility = Visibility.Visible;
+            btnRefresh.Visibility = Visibility.Visible;
+            btnValidate.Visibility = Visibility.Visible;
+
             textBlock.Visibility = Visibility.Hidden;
             cboVisitor.Visibility = Visibility.Hidden;
             btnFilter.Visibility = Visibility.Hidden;
@@ -62,6 +70,7 @@ namespace ModernUINavigationApp1.Pages.Comptables
 
             ExpenseLineBuild expenseLine = new ExpenseLineBuild();
             this.listExpenseLine = expenseLine.findOne(listExpenseReport[0].id.ToString());
+            expenseReportId = listExpenseReport[0].id.ToString();
             datagridExpense.DataContext = listExpenseLine;
         }
 
@@ -93,13 +102,28 @@ namespace ModernUINavigationApp1.Pages.Comptables
                 this.textResult = expenseLine.update(obj.id, "REFUSEE : " + obj.type, obj.name, obj.expense_date, obj.amount, obj.expense_report_id);
 
                 //refresh datagrid
-                this.listExpenseLine = expenseLine.findOne(listExpenseReport[0].id.ToString());
+                this.listExpenseLine = expenseLine.findOne(this.expenseReportId);
                 datagridExpense.DataContext = listExpenseLine;
             }
             else
             {
                 //TODO
             }
+        }
+
+        //if user click on button to refresh the datagrid
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            ExpenseLineBuild expenseLine = new ExpenseLineBuild();
+            this.listExpenseLine = expenseLine.findOne(this.expenseReportId);
+            datagridExpense.DataContext = listExpenseLine;
+        }
+
+
+        private void ValidateBtn_Click(object sender, EventArgs e)
+        {
+            FollowBuild follow = new FollowBuild();
+            this.expenseReportUpState = follow.update(this.expenseReportId,);
         }
     }
 }
