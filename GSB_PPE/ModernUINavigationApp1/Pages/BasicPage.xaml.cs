@@ -32,14 +32,12 @@ namespace ModernUINavigationApp1.Pages
             try
             {
                 this.listVisitor = visitor.findAll();
+                this.DataContext = listVisitor;
             }
             catch (Exception e)
             {
                 MessageBox.Show("Problème de connexion à l'api, vérifiez le lien dans les paramètres de l'application.");
-
             }
-            this.DataContext = listVisitor;
-
             InitializeComponent();
         }
 

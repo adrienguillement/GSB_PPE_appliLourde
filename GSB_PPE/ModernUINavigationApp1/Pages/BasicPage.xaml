@@ -16,7 +16,7 @@
                     <TranslateTransform X="-0.496"/>
                 </TransformGroup>
             </ScrollViewer.RenderTransform>
-            <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" Height="312" VerticalAlignment="Top" AutoGenerateColumns="False">
+            <DataGrid x:Name="DataGrid" ItemsSource="{Binding}" Height="312" VerticalAlignment="Top" AutoGenerateColumns="False" CanUserAddRows="false">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>

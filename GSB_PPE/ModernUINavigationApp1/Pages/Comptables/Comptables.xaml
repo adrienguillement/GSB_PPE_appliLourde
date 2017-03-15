@@ -1,17 +1,47 @@
 ﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Comptables.Comptables"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
             <StackPanel MinWidth="200">
                 <TextBlock Text="Comptables" Style="{StaticResource Heading2}" />
-                <TextBlock Text="Sélectionner une date :"></TextBlock>
-                <DatePicker x:Name="calendarPicker"/>
+
+                <!-- date -->
+                <TextBlock x:Name="txtboxSelectDate" Text="Selectionner une date :"></TextBlock>
+                <DatePicker x:Name="calendarPicker" HorizontalAlignment="Left" />
+
+                <!-- dropdown visitor -->
+                <TextBlock x:Name="textBlock" Text="Selectionner un visiteur"></TextBlock>
+                <ComboBox ItemsSource="{Binding Path=listVisitor}"
+                          DisplayMemberPath="full_name"
+                          SelectedValuePath="id"
+                          HorizontalAlignment="Left" 
+                          VerticalAlignment="Top" 
+                          Width="159"  
+                          IsTextSearchEnabled="True"
+                          IsEditable = "True"
+                          x:Name="cboVisitor"/>
+
+                <Button x:Name="btnFilter" Click="filterBtn_Click" Content="Rechercher" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <!-- filter button -->
+
+                <DataGrid x:Name="datagridExpense" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" CanUserAddRows="false">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="id" Binding="{Binding id}"/>
+                        <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
+                        <DataGridTextColumn Header="Nom" Binding="{Binding name}"/>
+                        <DataGridTextColumn Header="Date" Binding="{Binding expense_date}"/>
+                        <DataGridTextColumn Header="Montant" Binding="{Binding amount}"/>
+                        <DataGridTextColumn Header="Expense Report" Binding="{Binding expense_report_id}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </StackPanel>
         </ScrollViewer>
     </Grid>

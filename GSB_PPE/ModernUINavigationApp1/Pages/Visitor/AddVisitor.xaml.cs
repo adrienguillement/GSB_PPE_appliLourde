@@ -30,8 +30,8 @@ namespace ModernUINavigationApp1
             DepartementBuild departement = new DepartementBuild();
             this.listDepartement = departement.findAll();
 
-            
             InitializeComponent();
+            //for combobox
             DataContext = this;
         }
         /*

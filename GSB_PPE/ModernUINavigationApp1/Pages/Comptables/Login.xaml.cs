@@ -32,11 +32,12 @@ namespace ModernUINavigationApp1.Pages
         private void Connect_Click(object sender, EventArgs e)
         {
             MemberBuild member = new MemberBuild();
-            try
-            {
+            //try
+            //{
                 this.listMember = member.connect(mailTxtBox.Text, passwordTxtBox.Password);
                 if (this.listMember[0].groupe_id == "3")
                 {
+                    //open new window
                     Comptables.Comptables comptables = new Comptables.Comptables();
                     var host = new Window();
                     host.Content = comptables;
@@ -46,11 +47,11 @@ namespace ModernUINavigationApp1.Pages
                 {
                     infoConnect.Text = "Vous n'avez pas l'autorisation de continuer.";
                 }
-            }
-            catch
-            {
-                infoConnect.Text = "Mauvais identifiants.";
-            }
+            //}
+            //catch
+            //{
+            //   infoConnect.Text = "Mauvais identifiants.";
+            //}
         }
     }
 }

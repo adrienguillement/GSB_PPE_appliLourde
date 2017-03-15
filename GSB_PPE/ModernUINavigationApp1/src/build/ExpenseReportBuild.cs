@@ -27,5 +27,17 @@ namespace Models.src.build
             List<ExpenseReport> listClass = JsonConvert.DeserializeObject<List<ExpenseReport>>(getJson);
             return listClass;
         }
+
+        public List<ExpenseReport> findByDateVisitor(string dateInput, string visitor_id)
+        {
+            char[] delimiterChars = { ' ', '/' };
+            String[] dateInputParsed = dateInput.Split(delimiterChars);
+            string output = dateInputParsed[2] + "-" + dateInputParsed[1];
+
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString("http://adrienguillement.fr/GSB/" + this._table + "/dateAndVisitor/" + output + "/" +visitor_id);
+            List<ExpenseReport> listClass = JsonConvert.DeserializeObject<List<ExpenseReport>>(getJson);
+            return listClass;
+        }
     }
 }
