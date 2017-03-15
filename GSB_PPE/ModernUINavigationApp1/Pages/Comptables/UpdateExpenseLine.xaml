@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Comptables.UpdateExpenseLine"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="Modification :" Style="{StaticResource Heading2}" />
+                
+                <TextBlock Text="Libellé du frais forfaitaire :"></TextBlock>
+                <TextBox x:Name="expenseLineName" HorizontalAlignment="Left" Width="150"></TextBox>
+                
+                <TextBlock Text="Date :"></TextBlock>
+                <DatePicker x:Name="calendarPicker" HorizontalAlignment="Left" />
+                
+                <TextBlock Text="Montant :"></TextBlock>
+                <TextBox x:Name="expenseLineAmount" HorizontalAlignment="Left" Width="150"></TextBox>
+
+                <Button Click="UpdateExpenseLine_Click" HorizontalAlignment="Left" Content="Modifier" Width="150"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

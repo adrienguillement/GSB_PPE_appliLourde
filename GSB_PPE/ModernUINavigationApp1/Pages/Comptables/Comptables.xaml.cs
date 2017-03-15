@@ -28,6 +28,7 @@ namespace ModernUINavigationApp1.Pages.Comptables
 
         private List<ExpenseReport> listExpenseReport;
         private List<ExpenseLine> listExpenseLine;
+        private TextResult textResult;
 
         private String dateInput, visitor_id;
 
@@ -66,12 +67,39 @@ namespace ModernUINavigationApp1.Pages.Comptables
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            ExpenseLine obj = ((FrameworkElement)sender).DataContext as ExpenseLine;
 
+            if(obj.type == "forfaitaire")
+            {
+                //open new window for form
+                UpdateExpenseLine update = new UpdateExpenseLine(obj.id);
+                var host = new Window();
+                host.Content = update;
+                host.Show();
+            }
+            else
+            {
+                //TODO
+            }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            ExpenseLine obj = ((FrameworkElement)sender).DataContext as ExpenseLine;
 
+            if (obj.type == "hors-forfait")
+            {
+                ExpenseLineBuild expenseLine = new ExpenseLineBuild();
+                this.textResult = expenseLine.update(obj.id, "REFUSEE : " + obj.type, obj.name, obj.expense_date, obj.amount, obj.expense_report_id);
+
+                //refresh datagrid
+                this.listExpenseLine = expenseLine.findOne(listExpenseReport[0].id.ToString());
+                datagridExpense.DataContext = listExpenseLine;
+            }
+            else
+            {
+                //TODO
+            }
         }
     }
 }

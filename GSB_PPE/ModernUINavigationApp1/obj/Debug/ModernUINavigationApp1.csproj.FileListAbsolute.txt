@@ -127,3 +127,5 @@ C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\obj\Debug\ModernUINavigationApp1_MarkupCompile.lref
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\obj\Debug\Pages\Comptables\UpdateExpenseLine.baml
+C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\obj\Debug\Pages\Comptables\UpdateExpenseLine.g.cs

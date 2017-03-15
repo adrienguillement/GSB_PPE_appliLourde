@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\usersio\Source\Repos\GSB_PPE_appliLourde4\GSB_PPE\ModernUINavigationApp1\App.xaml
-101100758640
+11-1191593749
 
-29-112458407
+30-1852357992
 24-2028083091
-Pages\Comptables\Comptables.xaml;Pages\Comptables\Login.xaml;Pages\Visitor\AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\SettingsPage.xaml;Pages\Visitor\UpdateVisitor.xaml;
+Pages\Comptables\Comptables.xaml;Pages\Comptables\Login.xaml;Pages\Comptables\UpdateExpenseLine.xaml;Pages\Visitor\AddVisitor.xaml;Pages\Settings\LinkApi.xaml;MainWindow.xaml;Pages\BasicPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\SettingsPage.xaml;Pages\Visitor\UpdateVisitor.xaml;
 
 False
 

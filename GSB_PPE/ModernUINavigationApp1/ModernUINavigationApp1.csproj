@@ -89,6 +89,9 @@
     <Compile Include="Pages\Comptables\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Comptables\UpdateExpenseLine.xaml.cs">
+      <DependentUpon>UpdateExpenseLine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Visitor\AddVisitor.xaml.cs">
       <DependentUpon>AddVisitor.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Comptables\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Comptables\UpdateExpenseLine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

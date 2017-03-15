@@ -21,6 +21,15 @@ namespace ModernUINavigationApp1.src.build
             this._table = "expenseline";
         }
 
+        public List<ExpenseLine> findById(string expenseLine_id)
+        {
+            WebClient client = new WebClient();
+            string getJson = client.DownloadString(pathAPI + this._table + "/" + expenseLine_id);
+            List<ExpenseLine> listClass = JsonConvert.DeserializeObject<List<ExpenseLine>>(getJson);
+            return listClass;
+        }
+
+        //return all expenseLine from an expenseReport
         public List<ExpenseLine> findOne(string expenseReport_id)
         {
             WebClient client = new WebClient();
@@ -31,8 +40,12 @@ namespace ModernUINavigationApp1.src.build
 
         public TextResult update(string id, string type, string name, string expense_date, string amount, string expense_report_id)
         {
+            String[] dateInputParsed = expense_date.Split(' ');
+            String[] dateInputParse = dateInputParsed[0].Split('/');
+            string output = dateInputParse[2] + "-" + dateInputParse[1]+"-"+dateInputParse[0];
+
             WebClient client = new WebClient();
-            string getJson = client.DownloadString(pathAPI + this._table + "/update/" + id + "/" + type + "/" + name + "/" + expense_date + "/" + amount + "/" + expense_report_id);
+            string getJson = client.DownloadString(pathAPI + this._table + "/update/" + id + "/" + type + "/" + name + "/" + output + "/" + amount + "/" + expense_report_id);
             TextResult result = JsonConvert.DeserializeObject<TextResult>(getJson);
             return result;
         }
